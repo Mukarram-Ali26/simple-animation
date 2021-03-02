@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body{
+            background-image: url('./village.gif');
+            object-fit: contain;
+            background-repeat: repeat;
+            
+        }
+        .front {
+            
+            height: 300px;
+            width: 300px;
+                       
+        }
+        .blast{
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 10px;
+        }
+
+    </style>
     <title>Document</title>
 </head>
 <body>
     
+    <img src="./bird.gif" alt="bird" id="front">
+    <img src="./flying.gif" alt="flying" class="bird">
+    <img src="./blast.gif" alt="blast">
+    
+    <script>
+         var ele = document.querySelector('.front');
+        ele.animate([
+            {transform: 'translate(-1000px,0)'},
+            {transform: 'translate(1500px,0)'}
+            
+        ],{
+            duration: 20000,
+            iterations:Infinity
+        });
+        var bird = document.querySelector('#bird');
+        bird.animate([
+            {transform: 'translate(1500px,0)'},
+            {transform: 'translate(0,50px)'},
+            {transform: 'translate(-1000px,0)'}
+            
+        ],{
+            duration: 15000,
+            iterations:Infinity
+        });
+    
+    </script>
 </body>
 </html>
